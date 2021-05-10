@@ -1,7 +1,22 @@
-import react from "react";
-import { NavWrapper, NavContainer, NavItems, SiteLogo } from "./NaviElements";
+import { FaBars } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
+import {
+  NavWrapper,
+  NavContainer,
+  NavItems,
+  SiteLogo,
+  Icon,
+} from "./NaviElements";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
+  const itemsEng = [
+    "product-services",
+    "feedback",
+    "questions",
+    "choose-product",
+    "partners",
+  ];
+
   const items = [
     "產品服務",
     "用戶回饋",
@@ -11,13 +26,18 @@ const Navbar = () => {
   ];
 
   const renderItems = items.map((item, i) => (
-    <NavItems key={i}>{item}</NavItems>
+    <NavItems key={itemsEng[i]} to={itemsEng[i]}>
+      {item}
+    </NavItems>
   ));
 
   return (
     <>
-      <SiteLogo>BitcoEx</SiteLogo>
       <NavWrapper>
+        <SiteLogo onClick={() => scroll.scrollToTop()}>BitcoEx</SiteLogo>
+        <Icon onClick={toggle}>
+          <FaBars />
+        </Icon>
         <NavContainer>{renderItems}</NavContainer>
       </NavWrapper>
     </>

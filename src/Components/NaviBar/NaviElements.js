@@ -1,11 +1,30 @@
 import styled from "styled-components";
+import { Link as LinkS } from "react-scroll";
 
 export const NavWrapper = styled.nav`
   background-color: #090909;
-  height: 4rem;
+  height: 70px;
+  /* margin-top: -70px; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: sticky;
+  z-index: 10;
+
+  @media screen and (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
+`;
+
+export const NavContainer = styled.ul`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  z-index: 1;
+  padding: 0 24px;
+  max-width: 1100px;
 `;
 
 export const SiteLogo = styled.div`
@@ -18,21 +37,35 @@ export const SiteLogo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 0;
   left: 1rem;
   height: 4rem;
-  /* height: 4rem; */
+  cursor: pointer;
+  z-index: 10;
 `;
 
-export const NavContainer = styled.ul`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-export const NavItems = styled.li`
+export const NavItems = styled(LinkS)`
   color: #eee;
   margin: 1rem;
   font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const Icon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 2;
+  }
 `;
