@@ -2,13 +2,16 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const NavWrapper = styled.nav`
-  background-color: #090909;
+  background-color: transparent;
   height: 70px;
-  /* margin-top: -70px; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  position: sticky;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: 10;
 
   @media screen and (max-width: 960px) {
@@ -49,6 +52,12 @@ export const NavItems = styled(LinkS)`
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    color: #bec1bf;
+    transition: 0.3s ease-in-out;
+  }
 
   @media screen and (max-width: 768px) {
     display: none;
