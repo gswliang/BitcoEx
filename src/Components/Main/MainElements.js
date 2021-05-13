@@ -1,8 +1,15 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
+import background from "../../IMG/stock.jpg";
 
 export const MainContainer = styled.div`
-  background: #0c0c0c;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(${background});
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,20 +17,10 @@ export const MainContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
-  /* Add before style */
-`;
 
-export const MainBgn = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`;
-
-export const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  --o-object-fit: cover;
-  object-fit: cover;
+  @media screen and (max-width: 480px) {
+    width: 120%;
+  }
 `;
 
 export const MainContent = styled.div`
@@ -115,7 +112,7 @@ export const BtnContent = styled(Link)`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 18rem;
+    width: 19rem;
     margin-top: 1rem;
   }
 `;

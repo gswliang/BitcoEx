@@ -1,8 +1,6 @@
 import React from "react";
 import {
-  MainBgn,
   MainContainer,
-  VideoBg,
   MainContent,
   MainH1,
   MainH2,
@@ -11,15 +9,11 @@ import {
   BtnP,
   BtnPR,
 } from "./MainElements";
-import video from "../../Video/video.mp4";
 
 const Main = () => {
   return (
     <>
       <MainContainer>
-        <MainBgn>
-          <VideoBg src={video} autoPlay muted loop />
-        </MainBgn>
         <MainContent>
           <MainH1>BitcoEX幣圈</MainH1>
           <MainH2>提供您最完整虛擬通貨服務</MainH2>

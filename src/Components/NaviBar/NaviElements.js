@@ -77,4 +77,14 @@ export const Icon = styled.div`
     cursor: pointer;
     z-index: 2;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-left: auto;
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+
+    cursor: pointer;
+    z-index: 2;
+  }
 `;
