@@ -2,9 +2,15 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-size: 62.5%;
+  position: relative;
   font-family: "Noto Sans TC", "Poppins", sans-serif;
 }
 

@@ -17,10 +17,6 @@ export const MainContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
-
-  @media screen and (max-width: 480px) {
-    width: 120%;
-  }
 `;
 
 export const MainContent = styled.div`
@@ -67,13 +63,17 @@ export const MainBtnWrpper = styled.div`
   margin-top: 3.2rem;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
+    justify-content: center;
   }
   @media screen and (max-width: 480px) {
-    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 2rem;
   }
 `;
 
@@ -109,10 +109,8 @@ export const BtnContent = styled(Link)`
   }
 
   @media screen and (max-width: 480px) {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 19rem;
+    width: 18rem;
+    height: 4rem;
     margin-top: 1rem;
   }
 `;
@@ -127,6 +125,7 @@ export const BtnP = styled.div`
 
   @media screen and (max-width: 480px) {
     font-size: 1rem;
+    margin: 0;
   }
 `;
 
@@ -139,6 +138,8 @@ export const BtnPR = styled.div`
   }
 
   @media screen and (max-width: 480px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0;
   }
 `;

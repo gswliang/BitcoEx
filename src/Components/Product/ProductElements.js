@@ -5,7 +5,7 @@ export const ProductContainer = styled.div`
   height: 800px;
 
   @media screen and (max-width: 480px) {
-    width: 120%;
+    width: 100%;
   }
 `;
 
@@ -106,6 +106,10 @@ export const ProdctDtl = styled.p`
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.7rem;
+  }
 `;
 
 export const Detail = styled.p`
