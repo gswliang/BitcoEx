@@ -3,6 +3,7 @@ import Navbar from "../Components/NaviBar";
 import Product from "../Components/Product";
 import Sidebar from "../Components/Sidebar";
 import Main from "../Components/Main";
+import Realtime from "../Components/Realtime";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const Home = () => {
       <Main />
       <Navbar toggle={toggle} />
       <Product />
+      <Realtime />
     </>
   );
 };
